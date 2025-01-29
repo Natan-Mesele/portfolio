@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Unique car rent system",
+    "description": "A platform to rent cars online with ease and convenience.",
+    "technologies": ["Mern stack", "Tailwind CSS"],
+    "year": "2025",
+    "imageUrl": "https://www.fleetroot.com/wp-content/uploads/2020/08/20-features-in-car-rental-software-in-2020-1.jpg",
+    "demoLink": "https://car-rent-frontend.onrender.com",
+    "githubLink": "https://github.com/Natan-Mesele/E-commerce"
+  },
+  {
+    "title": "Zblog",
+    "description": "A feature-rich blog platform built to share company updates, news, and articles.",
+    "technologies": ["React", "Tailwind CSS", "Prismic CMS"],
+    "year": "2024",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1720744786849-a7412d24ffbf?q=80&w=1409&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "demoLink": "https://zblog1.netlify.app/",
+    "githubLink": "https://github.com/Natan-Mesele/blogn"
+  },
+  {
+    "title": "Online food delivery",
+    "description": "A platform to order food online from various restaurants.",
+    "technologies": ["React", "spring boot", "MySQL"],
+    "year": "2023",
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2022/7/UC/VD/GS/31988493/online-shoping-29-1024x819-500x500.jpg",
+    "demoLink": "https://demo-link-project-3.com",
+    "githubLink": "https://github.com/Natan-Mesele/onlinefooddeliverysb"
+  },
+  {
+    "title": "Tesla clone",
+   "description": "A visually stunning replica of the Tesla website featuring responsive design and interactive elements to showcase Tesla's cars and technology.",
+    "technologies": ["React", "Tailwind CSS"],
+    "year": "2022",
+    "imageUrl": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2020/05/Tesla-clone-xpeng-copies-website.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+    "demoLink": "https://teslaclone99.netlify.app/",
+    "githubLink": "https://github.com/Natan-Mesele/Tesla-clone"
+  },
+  {
+    "title": "Netflix Clone",
+    "description": "A fully responsive Netflix replica that features a dynamic user interface with the ability to browse movies and TV shows, watch trailers, and enjoy smooth transitions.",
+    "technologies": ["React", "Tailwind CSS"],
+    "year": "2022",
+    "imageUrl": "https://user-images.githubusercontent.com/61585443/185205338-c20bb089-618f-49e2-b740-1c02838030a4.png",
+    "demoLink": "https://statuesque-lamington-9ebacb.netlify.app/",
+    "githubLink": "https://github.com/Natan-Mesele/netflix-clone"
+  }
+]
