@@ -2,35 +2,46 @@ import React from 'react';
 
 function Hero() {
   return (
-    <div className="relative w-full h-screen max-w-7xl mx-auto pt-16 md:pt-0">
+    <div className="relative w-full min-h-[calc(100vh-4rem)] max-w-7xl mx-auto pt-24 md:pt-32 px-4 sm:px-6 lg:px-8">
       {/* Main Content Section */}
-      <div className="flex flex-col md:flex-row w-full h-full items-center">
+      <div className="flex flex-col md:flex-row w-full h-full items-center justify-center">
         {/* Left Section: About Text */}
-        <div className="flex flex-col justify-center items-center w-full md:w-1/2 p-8 md:p-16 text-left">
-          {/* Logo */}
-          <div className="mb-8 flex gap-2">
-            <div className="flex flex-col">
-              <h1 className="text-xl lg:text-2xl font-light text-white tracking-wide leading-tight mb-4 font-inter flex items-center">
-                <span className="mr-2 mb-6 mt-6 bg-gray-700 px-2 py-1 rounded-md inline-block animate-waving-hand">
+        <div className="flex flex-col justify-center items-start w-full md:w-1/2 py-8 md:py-16 lg:py-24">
+          <div className="mb-6 md:mb-8 lg:mb-12 space-y-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white tracking-tight leading-tight md:leading-snug mb-4 md:mb-6">
+              <span className="inline-block mr-3 animate-waving-hand">
+                <span className="bg-gradient-to-r from-amber-400 to-orange-400 text-transparent bg-clip-text text-3xl sm:text-4xl md:text-5xl">
                   ✌️
                 </span>
-                <span className="bg-gray-700 px-2 py-1 rounded-md">Hi, I'm <span>Natan Mesele</span>.</span>
-              </h1>
-              <p className="text-2xl lg:text-5xl font-light text-white tracking-wide leading-tight mb-6 font-inter">
-                Junior Developer focused on scalable, innovative applications.
-              </p>
-              <span className="text-base text-white opacity-70 hover:opacity-90 transition-opacity duration-300 font-inter">
-                I’m a Junior Software Developer with over a year of experience, recognized for my practical approach and ability to work efficiently in team environments to deliver projects on time.
               </span>
-            </div>
+              Hi, I'm{' '}
+              <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent font-semibold">
+                Natan Mesele
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-200 tracking-normal leading-relaxed mb-4 md:mb-6">
+              <span>I’m a </span>
+              <span className="bg-gradient-to-r from-amber-300 to-orange-300 bg-clip-text text-transparent font-medium">
+                Junior Developer
+              </span>{' '}
+              crafting scalable & innovative solutions
+            </p>
+
+            <p className="text-base sm:text-lg md:text-xl text-gray-300/90 hover:text-gray-100 transition-all duration-300">
+              Junior Software Developer with{' '}
+              <span className="bg-gradient-to-r from-blue-400/80 to-purple-400/80 px-2 py-1 rounded-lg">
+                over a year of experience
+              </span>{' '}
+              <span>, recognized for my practical approach and ability to work efficiently in team environments to deliver projects on time.
+                in team-driven projects</span>
+            </p>
           </div>
         </div>
 
         {/* Right Section: Animated Grid */}
-        <div className="w-full md:w-1/2 p-8 md:p-16 flex justify-center items-center">
-          <div className="grid-container hero-grid">
+        <div className="w-full md:w-1/2 p-4 sm:p-8 md:p-12 lg:p-16 flex justify-center items-center">
+          <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[400px] aspect-square">
             <div className="hero-grid-inner">
-              {/* Tick line as background in the grid */}
               <div className="tick-line"></div>
             </div>
           </div>
@@ -50,15 +61,6 @@ function Hero() {
             animation: wave 1.5s infinite ease-in-out;
           }
 
-          .hero-grid {
-            perspective: 600px;
-            width: 100%;
-            max-width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            z-index: 10;
-          }
-
           .hero-grid-inner { 
             position: relative;
             width: 100%;
@@ -75,13 +77,13 @@ function Hero() {
             left: 0;
             width: 100%;
             height: 100%;
-            border: 1px solid #00f7b5; /* Neon green */
+            border: 1px solid #00f7b5;
             box-sizing: border-box;
           }
 
           .hero-grid-inner::after {
             transform: rotateY(90deg);
-            border: 1px solid #ff69b4; /* Neon pink for depth */
+            border: 1px solid #ff69b4;
           }
 
           .tick-line {
@@ -90,7 +92,7 @@ function Hero() {
             left: 50%;
             width: 2px;
             height: 100%;
-            background-color: #ff69b4; /* Neon pink */
+            background-color: #ff69b4;
             transform-origin: bottom;
             animation: moveTick 2s infinite ease-in-out;
             transform: translateX(-50%) translateY(-50%);
@@ -107,17 +109,20 @@ function Hero() {
             to { transform: rotateX(360deg) rotateY(360deg); }
           }
 
-          @media (max-width: 768px) {
-            .grid-container {
-              max-width: 200px;
-              height: 200px;
+          @media (max-width: 640px) {
+            .hero-grid-inner {
+              animation: rotateGrid 15s infinite linear;
+            }
+            
+            .tick-line {
+              animation-duration: 3s;
             }
           }
 
-          @media (max-width: 480px) {
-            .grid-container {
-              max-width: 150px;
-              height: 150px;
+          @media (max-width: 768px) {
+            .hero-grid-inner::before,
+            .hero-grid-inner::after {
+              border-width: 1px;
             }
           }
         `}
