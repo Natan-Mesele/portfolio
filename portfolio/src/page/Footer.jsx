@@ -40,7 +40,7 @@ function Footer() {
 
             {/* Email */}
             <a
-              href="nattymesele@gmail.com"
+              href="mailto:nattymesele@gmail.com"
               className="text-gray-400 hover:text-white transition relative"
             >
               <FaEnvelope className="text-4xl" />
