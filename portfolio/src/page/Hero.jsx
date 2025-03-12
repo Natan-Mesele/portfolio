@@ -32,18 +32,19 @@ function Hero() {
               <span className="bg-gradient-to-r from-blue-400/80 to-purple-400/80 px-2 py-1 rounded-lg">
                 over a year of experience
               </span>{' '}
-              <span>, recognized for my practical approach and ability to work efficiently in team environments to deliver projects on time.
-                in team-driven projects</span>
+              <span>, recognized for my practical approach and ability to work efficiently in team environments to deliver projects on time.</span>
             </p>
           </div>
         </div>
 
-        {/* Right Section: Animated Grid */}
+        {/* Right Section: Image Instead of Animation */}
         <div className="w-full md:w-1/2 p-4 sm:p-8 md:p-12 lg:p-16 flex justify-center items-center">
-          <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[400px] aspect-square">
-            <div className="hero-grid-inner">
-              <div className="tick-line"></div>
-            </div>
+          <div className="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] aspect-w-16 aspect-h-9">
+            <img
+              src="https://i.imgur.com/gmqiSGN.png"
+              alt="Personal"
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
@@ -55,75 +56,10 @@ function Hero() {
             0%, 100% { transform: rotate(0deg); }
             50% { transform: rotate(15deg); }
           }
-          
+
           .animate-waving-hand {
             display: inline-block;
             animation: wave 1.5s infinite ease-in-out;
-          }
-
-          .hero-grid-inner { 
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            animation: rotateGrid 10s infinite linear;
-          }
-
-          .hero-grid-inner::before,
-          .hero-grid-inner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #00f7b5;
-            box-sizing: border-box;
-          }
-
-          .hero-grid-inner::after {
-            transform: rotateY(90deg);
-            border: 1px solid #ff69b4;
-          }
-
-          .tick-line {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background-color: #ff69b4;
-            transform-origin: bottom;
-            animation: moveTick 2s infinite ease-in-out;
-            transform: translateX(-50%) translateY(-50%);
-          }
-
-          @keyframes moveTick {
-            0% { height: 0; bottom: 0; }
-            50% { height: 100%; bottom: 0; }
-            100% { height: 0; bottom: 0; }
-          }
-
-          @keyframes rotateGrid {
-            from { transform: rotateX(0deg) rotateY(0deg); }
-            to { transform: rotateX(360deg) rotateY(360deg); }
-          }
-
-          @media (max-width: 640px) {
-            .hero-grid-inner {
-              animation: rotateGrid 15s infinite linear;
-            }
-            
-            .tick-line {
-              animation-duration: 3s;
-            }
-          }
-
-          @media (max-width: 768px) {
-            .hero-grid-inner::before,
-            .hero-grid-inner::after {
-              border-width: 1px;
-            }
           }
         `}
       </style>
